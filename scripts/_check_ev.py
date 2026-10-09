@@ -1,0 +1,1 @@
+import sys, json; sys.path.insert(0, 'backend'); import db; rows = db.query('SELECT evidence_type, label, status, reason, probability FROM assessment_evidence WHERE assessment_id = 389'); [print(r['evidence_type'], '|', r['label'], '|', r['status'], '|', r['reason'], '|', r['probability']) for r in rows]
